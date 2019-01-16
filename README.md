@@ -46,4 +46,9 @@ Pour atteindre une meilleure flexibilité, le feux doit être conscient des acti
 Avec l'arrivée des informations, le plan de signalisation est mis à jours petit à petit.
 À chaque étape temporelle (de plusieurs secondes à une minute), un contrôle optimal est déterminé pour un certain horizon de prédiction (typiquement plusieurs minutes).
 
-À chaque itération, chaque agent détermine son état actuel sur la base des informations reçues de ses détecteurs et des données reçues des agents amonts et avals. Ensuite, chaque agent essaie d'optimiser sa
+À chaque itération, chaque agent détermine son état actuel sur la base des informations reçues de ses détecteurs et des données reçues des agents amonts et avals. Ensuite, chaque agent essaie d'optimiser ses performances en régulant ses sorties et entrées.
+Les agents amonts envoient des requêtes à leur agent aval avec leur sortie prévue.
+Les agents avals déterminent l'impact de l'entrée prévue sur leur sur leur performance sous la forme d'un *Cost* chiffré qui est ensuite communiqué en amont.
+Chaque agent détermine ensuite si *Cost* pour l'aval dépasse leur propre *Cost* et décider d'adapter ou non son planning pour minimiser le temps de parcours total.
+
+Voir Algorithme 1 (pour la step 4 : utiliser le modèle look-ahead)
