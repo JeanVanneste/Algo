@@ -16,7 +16,7 @@ Mouvement : flux de véhicule "vert <-> rouge"
 L'approche par *block* permet de diminuer l'arbre de décision par rapport à l'approche *Stage*
 
 # Multi-Agent approach
-##Système multi-Agent
+## Système multi-Agent
 Ne marche que si le problème peut être subdivisé en sous-problèmes faiblement couplés
 De cette manière, la compositions des solutions locales s'approchera de la solution globale
 
@@ -39,11 +39,11 @@ La performance dépend aussi du trafic sur les mvts mineurs.
 
 Pour atteindre une meilleure flexibilité, le feux doit être conscient des actions des agents avals et amonts sur ses performances et des effets de ses actions sur les agents en aval et en amont.
 
-###Fonctionnement :
+### Fonctionnement :
 
 **État initial :** Aucune information n'est disponible des agents voisins
 
 Avec l'arrivée des informations, le plan de signalisation est mis à jours petit à petit.
 À chaque étape temporelle (de plusieurs secondes à une minute), un contrôle optimal est déterminé pour un certain horizon de prédiction (typiquement plusieurs minutes).
 
-À chaque itération, chaque agent détermine son état actuel sur la base des informations reçues de ses détecteurs et des données reçues des agents amonts et avals. Ensuite, chaque agent essaie d'optimiser sa 
+À chaque itération, chaque agent détermine son état actuel sur la base des informations reçues de ses détecteurs et des données reçues des agents amonts et avals. Ensuite, chaque agent essaie d'optimiser sa
